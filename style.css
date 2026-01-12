@@ -1,0 +1,82 @@
+.btn-login{
+    margin-right: 3.5pt;
+
+}
+
+.btn-register{
+    margin-right: 10px;
+}
+
+.navbar{
+    padding-left: 10px;
+    padding-right: 5pxpx;
+}
+
+.register-container{
+   margin-top: 50px ;
+   background-color: white;
+   margin-bottom: 50px;
+}
+
+/* --- Base Styles (Small Screen / Mobile First) --- */
+.responsive-container {
+  /* Default: Stacks elements vertically */
+  display: flex;
+  flex-direction: column; /* Stacks the items one below the other */
+  position: relative; /* Needed for absolute positioning of the mobile text overlay */
+  width: 100%;
+}
+
+.image-wrapper {
+  position: relative; /* Needed to position the text overlay inside the image area */
+  width: 100%;
+}
+
+.image-wrapper img {
+  width: 100%; /* Makes the image responsive */
+  height: auto;
+  display: block;
+}
+
+/* Text OVER image for small screens */
+.text-overlay-mobile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the text perfectly */
+  color: white; /* Ensure text is readable on the image */
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+  padding: 10px;
+  border-radius: 15px;
+  padding: 35px;
+  text-align: center;
+  width: 80%; /* Adjust width as needed */
+}
+
+/* Hide the desktop text container by default on small screens */
+.text-next-to-image {
+  display: none;
+}
+
+/* --- Media Query (Large Screens) --- */
+@media screen and (min-width: 768px) { /* Adjust breakpoint as needed */
+  .responsive-container {
+    flex-direction: row; /* Aligns items side-by-side on large screens */
+    align-items: center; /* Vertically aligns items in the middle */
+  }
+
+  .image-wrapper {
+    width: 50%; /* Adjust width ratio as needed */
+  }
+
+  .text-next-to-image {
+    display: block; /* Show the desktop text */
+    width: 50%; /* Adjust width ratio as needed */
+    padding: 20px; /* Add some space around the text */
+  }
+
+  /* Hide the mobile text overlay on large screens */
+  .text-overlay-mobile {
+    display: none;
+  }
+}
